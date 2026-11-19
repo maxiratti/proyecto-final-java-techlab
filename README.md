@@ -68,7 +68,7 @@ Los cambios de estado permitidos son PENDIENTE → CONFIRMADO → ENVIADO → EN
 - Validación de datos y respuestas HTTP 400, 404 y 409 con mensajes.
 - Los productos en pedidos pendientes/confirmados no se eliminan; sus líneas conservan nombre/precio aunque el catálogo cambie después.
 
-## 5. Alcance y decisiones para explicar
+## 5. Alcance del sistema
 
 Aplicación académica de uso local, sin autenticación ni autorización por roles. La selección de un perfil no verifica identidad; la pantalla lo indica. No se procesan pagos ni envíos reales. El carrito permanece en memoria del navegador y se pierde al recargar; los pedidos, productos, usuarios y categorías se guardan en MySQL. La selección de usuario se conserva localmente hasta Salir. El servidor escucha en 127.0.0.1.
 
@@ -78,7 +78,7 @@ Se conservó `Long` para IDs y `Double/double` para precios del ejemplo original
 
 Las imágenes pueden ser URLs http/https; si fallan, se muestra la ilustración local. No se necesita conexión para los estilos, scripts o imagen predeterminada.
 
-## 6. Estructura para la exposición
+## 6. Estructura del proyecto
 
 `controller`: endpoints REST, DTO de entrada y manejo de errores.
 `service/TiendaService`: reglas, validaciones, transacciones y stock.
@@ -88,4 +88,4 @@ Las imágenes pueden ser URLs http/https; si fallan, se muestra la ilustración 
 `resources/static`: index.html, css/app.css, js/app.js e imagen SVG local.
 `src/test`: pruebas de integración con H2 en modo MySQL (no toca la base de la netbook).
 
-Consultar `API_Y_PRUEBAS.md` y `GUION_VIDEO.md` para la entrega.
+Consultar `API_Y_PRUEBAS.md` para los endpoints y las pruebas.
