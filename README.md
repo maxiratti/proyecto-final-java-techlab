@@ -80,12 +80,42 @@ Las imágenes pueden ser URLs http/https; si fallan, se muestra la ilustración 
 
 ## 6. Estructura del proyecto
 
-`controller`: endpoints REST, DTO de entrada y manejo de errores.
-`service/TiendaService`: reglas, validaciones, transacciones y stock.
-`repository`: interfaces JpaRepository y bloqueos de registros.
-`model`: entidades Articulo, Categoria, Usuario, Pedido, LineaPedido y enum EstadoPedido.
-`config`: datos iniciales.
-`resources/static`: index.html, css/app.css, js/app.js e imagen SVG local.
-`src/test`: pruebas de integración con H2 en modo MySQL (no toca la base de la netbook).
+## Estructura del proyecto
+
+```text
+proyecto-final-techlab/
+├── src/
+│   ├── main/
+│   │   ├── java/com/ejemplo/articulos/
+│   │   │   ├── ArticuloApiApplication.java
+│   │   │   ├── config/          # Datos iniciales
+│   │   │   ├── controller/      # Endpoints REST y manejo de errores
+│   │   │   ├── excepciones/     # Excepciones del negocio
+│   │   │   ├── model/           # Entidades y estados de pedidos
+│   │   │   ├── repository/      # Acceso a datos mediante JPA
+│   │   │   └── service/         # Reglas de negocio y control de stock
+│   │   └── resources/
+│   │       ├── application.properties
+│   │       └── static/
+│   │           ├── index.html
+│   │           ├── css/app.css
+│   │           ├── js/app.js
+│   │           └── img/producto.svg
+│   └── test/                   # Pruebas de integración
+├── .gitignore
+├── API_Y_PRUEBAS.md
+├── INICIAR.ps1
+├── pom.xml
+├── README.md
+└── VERIFICACION.md
+```
+
+| Capa | Responsabilidad |
+|---|---|
+| **Controller** | Recibe las peticiones HTTP y devuelve respuestas JSON. |
+| **Service** | Aplica validaciones, administra pedidos y controla el stock. |
+| **Repository** | Consulta y modifica la base de datos mediante Spring Data JPA. |
+| **Model** | Representa productos, categorías, usuarios, pedidos y sus líneas. |
+| **Frontend** | Presenta la interfaz y consume la API mediante `fetch`. |
 
 Consultar `API_Y_PRUEBAS.md` para los endpoints y las pruebas.
