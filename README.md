@@ -1,6 +1,6 @@
 # TECHLAB — Proyecto final de Backend Java
 
-Versión ampliada del ejemplo de la profesora Gisele González, para la entrega de Maximiliano Ratti. Mantiene Java 17 (compatible con JDK 21), Spring Boot 3.2.5, Maven, JPA y MySQL; agrega frontend HTML/CSS/JS servido por la misma aplicación.
+Versión ampliada del ejemplo de la profesora Gisele González, para la entrega de `Maximiliano Ratti`. Mantiene Java 17 (compatible con JDK 21), Spring Boot 3.2.5, Maven, JPA y MySQL; agrega frontend HTML/CSS/JS servido por la misma aplicación.
 
 ## 1. Instalar sin mezclar versiones
 
@@ -79,8 +79,6 @@ Se conservó `Long` para IDs y `Double/double` para precios del ejemplo original
 Las imágenes pueden ser URLs http/https; si fallan, se muestra la ilustración local. No se necesita conexión para los estilos, scripts o imagen predeterminada.
 
 ## 6. Estructura del proyecto
-
-## Estructura del proyecto
 
 ```text
 proyecto-final-techlab/
