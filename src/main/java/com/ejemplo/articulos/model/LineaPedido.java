@@ -1,7 +1,8 @@
 package com.ejemplo.articulos.model;
-import jakarta.persistence.*;
-import java.util.*;
-import java.time.LocalDateTime;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 
